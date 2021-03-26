@@ -1,49 +1,22 @@
-const englishToMorse = {
-  A:'.-', 
-  B:'-...', 
-  C:'-.-.', 
-  D:'-..', 
-  E:'.', 
-  F:'..-.', 
-  G:'--.', 
-  H:'....', 
-  I:'..', 
-  J:'.---', 
-  K:'-.-', 
-  L:'.-..', 
-  M:'--', 
-  N:'-.', 
-  O:'---', 
-  P:'.--.', 
-  Q:'--.-', 
-  R:'.-.', 
-  S:'...', 
-  T:'-', 
-  U:'..-', 
-  V:'...-', 
-  W:'.--', 
-  X:'-..-', 
-  Y:'-.--', 
-  Z:'--..', 
-  1:'.----', 
-  2:'..---', 
-  3:'...--', 
-  4:'....-', 
-  5:'.....', 
-  6:'-....', 
-  7:'--...', 
-  8:'---..', 
-  9:'----.', 
-  0:'-----', 
-  ',':'--..--', 
-  '.':'.-.-.-', 
-  ' ':'/', 
-}
-
+import englishToMorse from './englishLetters.js'
+import morseToEnglish from './morseSymbols.js'
+import facts from './data.js'
 
 
 const englishInput = document.querySelector(".english");
 const morseOutput = document.querySelector(".morse-output");
+console.log(facts.length)
+let carouselInner = document.querySelector('.carousel-inner')
+
+carouselInner.innerHTML = facts.map((mfact, i) => {
+  if (i === 0){
+    return `<p class="carousel-item active">${mfact.fact} ${mfact.details}</p>`
+  } else {
+    return `<p class="carousel-item ">${mfact.fact} ${mfact.details}</p>`
+
+  }
+  
+}).join(' ')
 
 const englishTextConverter = ()=> {
   let convertedText = englishInput.value;
@@ -58,6 +31,24 @@ const englishTextConverter = ()=> {
 
 englishInput.addEventListener("input", englishTextConverter
 );
+
+const morseInput = document.querySelector(".morse");
+const englishOutput = document.querySelector(".english-output");
+
+const morseTextConverter = ()=> {
+  let convertedText = morseInput.value;
+  convertedText = convertedText.toUpperCase();
+  convertedText = convertedText.split(" ");
+  for (let i = 0; i < convertedText.length; i++) {
+    convertedText[i] = morseToEnglish[convertedText[i]];
+  }
+  convertedText = convertedText.join("");
+  englishOutput.innerHTML = convertedText;
+}
+
+morseInput.addEventListener("input", morseTextConverter
+);
+
 
 
 

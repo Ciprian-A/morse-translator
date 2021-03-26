@@ -10,9 +10,14 @@ body {
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  background-image: url("./images/morse-typing.png");
+  background-image: url("./images/wp.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body h2 {
+  font-weight: 700;
+  padding-top: 20px;
 }
 
 body::after {
@@ -22,32 +27,86 @@ body::after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: -1;
 }
 
-body h1 {
+body nav {
+  background-color: orange;
+  height: 15vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 0 10px 2px black;
+          box-shadow: 0 0 10px 2px black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav a {
+  width: 90px;
+  height: 100%;
+}
+
+body nav a img {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  position: relative;
+}
+
+body nav h1 {
   position: relative;
   color: white;
   text-decoration: underline;
   -webkit-text-decoration-style: dashed;
           text-decoration-style: dashed;
-  z-index: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
 }
 
 body main {
   position: relative;
-  background: linear-gradient(217deg, rgba(0, 153, 255, 0.8), rgba(0, 38, 255, 0.445) 70.71%);
+  background: linear-gradient(217deg, #241c1c, #131525 70.71%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 50px auto;
-  width: 50%;
-  min-height: 60vh;
-  border: 3px solid white;
+  width: 80%;
+  min-height: 50vh;
+  border: 3px solid orange;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 13px 3px black;
+          box-shadow: 3px 3px 13px 3px black;
+}
+
+#carouselExampleSlidesOnly {
+  width: 80%;
+  border: 2px solid black;
+  margin: 20px auto;
+  height: 70px;
+  background: linear-gradient(217deg, #241c1c, #131525 70.71%);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  font-size: larger;
+  font-weight: 500;
 }
 
 .english-morse {
@@ -65,9 +124,35 @@ body main {
 .english-morse input {
   background-color: #fff;
   margin: 20px;
+  width: 90%;
+  font-size: 1.5em;
 }
 
 .english-morse p {
+  color: white;
+  font-size: 1.3em;
+}
+
+.morse-english {
+  width: 50%;
+  min-height: 100%;
+  margin: 0 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.morse-english h2 {
+  color: white;
+}
+
+.morse-english input {
+  background-color: #fff;
+  margin: 20px;
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.morse-english p {
   color: white;
   font-size: 1.3em;
 }

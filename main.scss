@@ -8,9 +8,14 @@ body {
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  background-image: url('./images/morse-typing.png');
+  background-image: url('./images/wp.png');
   background-size: cover;
   background-repeat: no-repeat;
+
+  h2 {
+    font-weight: 700;
+    padding-top: 20px;
+  }
 
   &::after {
     content: '';
@@ -19,36 +24,75 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: -1;
 
 
   }
+nav {
+  background-color: orange;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 0 10px 2px black;
+  justify-content: space-between;
 
+  a {
+    width: 90px;
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+      position: relative;
+      
+    }
+  }
   h1 {
     position: relative;
     color: white;
     text-decoration: underline;
     text-decoration-style: dashed;
-    z-index: 1;
+    align-self: center;
+    margin: auto;
   }
+}
 
   main {
     position: relative;
-    background: linear-gradient(217deg, rgba(0, 153, 255, 0.8), rgba(0, 38, 255, 0.445) 70.71%);
+    background: linear-gradient(217deg, rgb(36, 28, 28), rgb(19, 21, 37) 70.71%);
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 50px auto ;
-    width: 50%;
-    min-height: 60vh;
-    border: 3px solid white;
+    width: 80%;
+    min-height: 50vh;
+    border: 3px solid orange;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px 3px black;
 
     
     
   }
 }
 
+#carouselExampleSlidesOnly {
+  width: 80%;
+  border: 2px solid black;
+  margin: 20px auto;
+  height: 70px;
+  background: linear-gradient(217deg, rgb(36, 28, 28), rgb(19, 21, 37) 70.71%);
+  color: white;
+  display: flex;
+  align-items: center;
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  font-size: larger;
+  font-weight: 500;
+}
 
 .english-morse {
   width: 50%;
@@ -63,7 +107,34 @@ body {
   }
   input{
     background-color: #fff;
-    margin: 20px 
+    margin: 20px;
+    width: 90%;
+    font-size: 1.5em;
+    
+  }
+  p {
+    color :white;
+    font-size: 1.3em;
+  }
+
+}
+.morse-english {
+  width: 50%;
+  min-height: 100%;
+  margin: 0 50px;
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    color: white;
+   
+  }
+  input{
+    background-color: #fff;
+    margin: 20px;
+    width: 90%;
+    font-size: 1.5em;
+
     
   }
   p {
