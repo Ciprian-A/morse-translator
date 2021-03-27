@@ -1,75 +1,73 @@
+@import './variables.scss' ;
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 100%;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  width: $percentage1;
+  height: $percentage1;
   text-align: center;
   background-image: url('./images/wp.png');
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 
-  h2 {
+  h3 {
     font-weight: 700;
-    padding-top: 20px;
+    color: $secondary;
+    display: inline-block;
+    background-color: $tertiary;
+    margin: $dimension1 * 1.5 auto;
+    letter-spacing: $dimension2 * 4;
   }
 
-  &::after {
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: -1;
+  
 
 
-  }
-nav {
-  background-color: orange;
-  height: 15vh;
-  width: 100%;
-  display: flex;
-  box-shadow: 0 0 10px 2px black;
-  justify-content: space-between;
 
-  a {
-    width: 90px;
-    height: 100%;
-    img {
-      height: 100%;
-      width: 100%;
-      padding: 5px;
+  nav {
+    background-color: $primary;
+    height: $dimension1 * 5;
+    width: $percentage1;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      width: $dimension1 * 6;
+      height: $percentage1;
+      img {
+        height: $percentage1;
+        width: $percentage1;
+        padding: $dimension2 * 3;
+        position: relative;
+        
+      }
+    }
+    h1 {
       position: relative;
-      
+      color: $secondary;
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      align-self: center;
+      margin: auto;
     }
   }
-  h1 {
-    position: relative;
-    color: white;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    align-self: center;
-    margin: auto;
-  }
-}
 
   main {
     position: relative;
-    background: linear-gradient(217deg, rgb(36, 28, 28), rgb(19, 21, 37) 70.71%);
+    background: $quaternary;
 
     display: flex;
     justify-content: space-between;
-    margin: 50px auto ;
-    width: 80%;
-    min-height: 50vh;
-    border: 3px solid orange;
-    border-radius: 10px;
-    box-shadow: 3px 3px 13px 3px black;
+    margin: $dimension1 * 5 auto;
+    width: $percentage1 * 0.8;
+    min-height: $viewport1 / 2;
+    border: $dimension2 * 1.5 solid $primary;
+    border-radius: $dimension1 * 0.6;
 
     
     
@@ -77,16 +75,15 @@ nav {
 }
 
 #carouselExampleSlidesOnly {
-  width: 80%;
-  border: 2px solid black;
-  margin: 20px auto;
-  height: 70px;
-  background: linear-gradient(217deg, rgb(36, 28, 28), rgb(19, 21, 37) 70.71%);
-  color: white;
+  width: $percentage1 * 0.8;
+  margin: $dimension1 * 0.6 auto;
+  height: $dimension1 * 5;
+  background: $quaternary;
+  color: $secondary;
   display: flex;
   align-items: center;
-  border: 3px solid orange;
-  border-radius: 10px;
+  border: $dimension2 * 1.5 solid $primary;
+  border-radius: $dimension1 * 0.6;
 }
 
 .carousel-item {
@@ -95,26 +92,28 @@ nav {
 }
 
 .english-morse {
-  width: 50%;
-  min-height: 100%;
-  margin: 0 50px;
+  width: $percentage1 / 2;
+  min-height: $percentage1;
+  margin: 0 $dimension1 * 3;
   position: relative;
   z-index: 1;
 
   h2 {
-    color: white;
+    color: $secondary;
+    padding-top: $dimension1;
    
   }
   input{
-    background-color: #fff;
-    margin: 20px;
-    width: 90%;
-    font-size: 1.5em;
+    background-color: $secondary;
+    margin: $dimension1 * 1.1;
+    width: $percentage1 * 0.9;
+    font-size: $dimension1 * 1.5;
+    border-radius: $dimension1 * 0.6;
     
   }
   p {
-    color :white;
-    font-size: 1.3em;
+    color :$secondary;
+    font-size: $dimension1 * 1.3;
   }
 
 }
@@ -126,23 +125,57 @@ nav {
   z-index: 1;
 
   h2 {
-    color: white;
-   
+    color: $secondary;
+    padding-top: $dimension1;
+
   }
   input{
-    background-color: #fff;
-    margin: 20px;
-    width: 90%;
-    font-size: 1.5em;
+    background-color: $secondary;
+    margin: $dimension1 * 1.1;
+    width: $percentage1 * 0.9;
+    font-size: $dimension1 * 1.5;
+    border-radius: $dimension1 * 0.6;
 
     
   }
   p {
-    color :white;
-    font-size: 1.3em;
+    color :$secondary;
+    font-size: $dimension1 * 1.3;
   }
 
 }
 
 
   
+@media screen and (max-width: 850px) {
+  body {
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      min-height: $viewport1;
+      width: $percentage2 * 9;
+
+      
+    }
+      .morse-english,
+      .english-morse {
+        width: $percentage1;
+        margin: $dimension2 * 0.6 auto;
+        padding: $dimension2 * 3;
+      }
+      .english-morse {
+        top: -($dimension1 * 5);
+      }
+    }
+    #carouselExampleSlidesOnly{
+      height: $dimension1 * 9.5;
+      width: $percentage2 * 9;
+
+      .carousel-item {
+        padding: $dimension2 * 3 $dimension2 * 6;
+
+      }
+    }
+}

@@ -17,7 +17,7 @@ const facts = [
   },
   {
     'fact':'First message sent in Morse: ',
-    'details': '"What hath God Wrought"'
+    'details': '"What hath God Wrought?"'
   },
   {
     'fact':'1838: 	',
@@ -68,8 +68,8 @@ const facts = [
     'details': 'The letters "SOS" became the standard distress signal at the International Conference on Morse Code'
   },
   {
-    'fact':'SOS distress signal: ',
-    'details': 'The internationally recognized distress signal, SOS, does not stand for any words: the letters were chosen because they are easy to transmit in Morse code: "S" is three dots, and "O" is three dashes and they were easy remember and send.'
+    'fact':'SOS: ',
+    'details': 'Was chosen because they are easy to transmit in Morse code: "S" is three dots, and "O" is three dashes.'
   },
   {
     'fact':'1930: ',
@@ -85,7 +85,7 @@ const facts = [
   },
   {
     'fact':'14 July 2013: ',
-    'details': 'India\'s state-owned telecom company, BSNL, ended its telegraph service. This was reported to be the World\'s last true commercial electric telegraph system.'
+    'details': 'The World\'s last true commercial electric telegraph system ended its telegraph service. '
   },
 ]
 
